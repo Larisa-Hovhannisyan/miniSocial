@@ -5,8 +5,10 @@ import indexRouter from "./routes/index";
 import authRouter from "./routes/auth";
 import postsRouter from "./routes/posts";
 import expressLayouts from "express-ejs-layouts";
+import { setupSwagger } from "./swagger";
 
 const app = express();
+setupSwagger(app);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
