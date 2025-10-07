@@ -16,6 +16,7 @@ const PostSchema = new Schema<IPost>({
   createdAt: { type: Date, default: Date.now }
 });
 
-export default model<IPost>("Post", PostSchema);
+const Post = model<IPost>("Post", PostSchema);
+export default Post;
 
 
